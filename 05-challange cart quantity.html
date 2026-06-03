@@ -11,7 +11,7 @@
     </button>
     <button
       onclick="
-        CartQuantity = CartQuantity + 1;
+        CartQuantity ++; // add One item only
         console.log(`Cart Quantity: ${CartQuantity}`);
       "
     >
@@ -19,21 +19,29 @@
     </button>
     <button
       onclick="
-        CartQuantity = CartQuantity + 2;
+        CartQuantity += 2;
         console.log(`Cart Quantity: ${CartQuantity}`);
       "
     >
       +2
     </button>
-    <button onclick="
-        CartQuantity = CartQuantity + 3;
+    <button
+      onclick="
+        CartQuantity += 3;
         console.log(`Cart Quantity: ${CartQuantity}`);
-      ">+3</button>
-    <button onclick="
-    CartQuantity = 0; console.log('Cart Was Reset');
-    console.log(`Cart Quantity: ${CartQuantity}`);
-    
-    ">Reset the Cart</button>
+      "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+        CartQuantity = 0;
+        console.log('Cart Was Reset');
+        console.log(`Cart Quantity: ${CartQuantity}`);
+      "
+    >
+      Reset the Cart
+    </button>
 
     <script>
       let CartQuantity = 0;
