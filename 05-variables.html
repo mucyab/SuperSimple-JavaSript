@@ -10,15 +10,15 @@
       let var1 = 3; // assigning the value to variable
       console.log(var1);
 
-      let calculate = 10 + 10;
+      const calculate = 10 + 10;  // const value will not chanage or re-assigned
       console.log(calculate);
 
       console.log(calculate + 10);
 
-      let result = calculate + 5;
+      const result = calculate + 5;
       console.log(result);
 
-      let message = "Hello Me";
+      const message = "Hello Me";
       console.log(message);
       console.log("L");
 
@@ -27,6 +27,11 @@
 
       var1 = var1 + 5; // re-assigning the value to variable, we don't use 'let' for re-assigning the value, otherwise it become new variable
       console.log(var1);
+
+      var var3 = 3; // var was original variable of JavaScript, var means variables, and var have issue
+      console.log(typeof var3); // show type of variable = number
+      console.log(typeof message); // show type of variable = string
+       
     </script>
   </body>
 </html>
