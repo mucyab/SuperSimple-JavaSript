@@ -52,6 +52,20 @@
         product1.fun(); // call the function in the object, as function was assigned 
         
         // function inside the object is Method, as "console" is a object provided by JavaScript, and "log" is function. it execute what is inside ().
+        console.log(typeof console.log); // show the Type of console.log = function.
+
+        // Math.random is also Method, "Math" is object and "random" is function
+        
+        // "JSON" JavaScript object Notation, it is similer to JavaScript Object but with less feature, heavily use of "" in Value and Properties both, does't support function as object does support.
+
+        // why we use JSON instead of Obeject, as JSON is Universal, it supported by all languages and JavaScript Object only work in JavaScript. we use jSON to send data to other computer/systems which does not support JavaScript. and it also support data store in local Drive.
+
+        JSON.stringify(product1) // convert javaScript Object into JSON.
+        console.log(JSON.stringify(product1));  // converted object to string
+        console.log(typeof JSON.stringify(product1));
+        
+        const jsonString = JSON.stringify(product1);
+        console.log(JSON.parse(jsonString));  //convert JSON into JavaScript Object
         
         
         
