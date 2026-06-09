@@ -27,13 +27,32 @@
         console.log(product);
         
         const product1 = {
-            name: 'Shirt'
+            name: 'Shirt',
+            ['delivery-time']: '1 day',
+            rating: {               // nested object, object inside the object
+                stars: 4.5,
+                count: 87
+            },
+
+            //adding function in an object
+            fun: function f1 () {
+                console.log('function inside the object');
+                
+            }
         };
         console.log(product1);
         console.log(product1.name); //Dot. Notation
         console.log(product1['name']); //same as Dot-Notation. its Brackets Notation, and we access by value in string variable
        // console.log(product1.delivery-time); // JavaScript take - as Math, and give error, so we use [], 
-        console.log(product['delivery-time']);
+        console.log(product1['delivery-time']);
+
+        console.log(product1.rating);
+        console.log(product1.rating.count);
+        console.log(product1.fun); // call the function in the object, it will give the function code
+        product1.fun(); // call the function in the object, as function was assigned 
+        
+        // function inside the object is Method, as "console" is a object provided by JavaScript, and "log" is function. it execute what is inside ().
+        
         
         
     </script>
