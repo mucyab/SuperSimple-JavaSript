@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obejects in JavaScript</title>
+</head>
+<body>
+    <script> // Why Object is need. beacuase Object is used to make our code more organized and simple, instead of creating alot of variables, we can just simple grounp them together. and it also used to call multiple values at ones
+    
+        const product = { //object start by { and end by }
+            name: 'socks', // these are Propery-Value pair, seprate by , 
+            price: 1090
+        };
+        console.log(product); // call the object
+        console.log(typeof product); // if we want to check Type of.
+        console.log(product.name); // call the signle Propert-Value Pair.
+        console.log(product.price);
+
+        product.name = 'cotton socks'; // Change the Value of Propert already assigned
+        console.log(product);
+
+        product.newProperty = true; //Add new property
+        console.log(product);
+
+        delete product.newProperty; // delete any property in the Object
+        console.log(product);
+
+    </script>
+</body>
+</html>
