@@ -6,8 +6,8 @@
     <title>Obejects in JavaScript</title>
 </head>
 <body>
-    <script> // Why Object is need. beacuase Object is used to make our code more organized and simple, instead of creating alot of variables, we can just simple grounp them together. and it also used to call multiple values at ones
-    
+    <script> // Why Object is need. beacuase Object is used to make our code more organized and simple, instead of creating alot of variables, we can   just simple grounp them together. and it also used to call multiple values at ones
+
         const product = { //object start by { and end by }
             name: 'socks', // these are Propery-Value pair, seprate by , 
             price: 1090
@@ -25,7 +25,17 @@
 
         delete product.newProperty; // delete any property in the Object
         console.log(product);
-
+        
+        const product1 = {
+            name: 'Shirt'
+        };
+        console.log(product1);
+        console.log(product1.name); //Dot. Notation
+        console.log(product1['name']); //same as Dot-Notation. its Brackets Notation, and we access by value in string variable
+       // console.log(product1.delivery-time); // JavaScript take - as Math, and give error, so we use [], 
+        console.log(product['delivery-time']);
+        
+        
     </script>
 </body>
 </html>
