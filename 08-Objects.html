@@ -33,15 +33,31 @@
                 stars: 4.5,
                 count: 87
             },
-
+                      
             //adding function in an object
             fun: function f1 () {
                 console.log('function inside the object');
                 
             }
         };
+
+        const product2 = {
+            name: 'Shirt',
+            color: 'white',
+            rating: {               // nested object, object inside the object
+                stars: 4.5,
+                count: 87
+            },
+
+            //adding function in an object
+            fun: function f1 () {
+                console.log('function inside the object');
+            }
+        };
+        console.log(product2);
         console.log(product1);
         console.log(product1.name); //Dot. Notation
+        console.log(product2.color); //Dot. Notation
         console.log(product1['name']); //same as Dot-Notation. its Brackets Notation, and we access by value in string variable
        // console.log(product1.delivery-time); // JavaScript take - as Math, and give error, so we use [], 
         console.log(product1['delivery-time']);
@@ -72,7 +88,20 @@
         console.log('tera ma ka bosra uhhh'.length);
         console.log('tera ma ka bosra uhhh'.toUpperCase());
         
+        //objects are references. or copy by references
+
+        const object1 = {
+            message: 'hello'
+        };
+        const object2 = object1;
+
+        object1.message = 'Good Puppy';
+        console.log(object1);
+        console.log(object2);
         
+
+
+
     </script>
 </body>
 </html>
