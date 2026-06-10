@@ -99,9 +99,43 @@
         console.log(object1);
         console.log(object2);
         
+        // there is refence of two different value, but not the same refence, it only compare reference not the values inside on it.
+        const object3 = {
+            message: 'Good Puppy'
+        };
+        console.log(object3 === object1); // false
 
+        console.log(object2 === object1); // true
+        
+        const object4 = {
+            message: 'Good work',
+            price: 799
+        }
+        // const message = object4.message;
+        const {message, price} = object4; // this will decunstract of a property
+        console.log(message);
+        console.log(price); //Destructuring - easier way to take properties out of an Object
 
+        const object5 = {
+            //message: message  
+            message,                  // work same as message: message  but shorthand
+           
+            
+           /* method: function f1() {
+                console.log('method');    
+            }
+           */
 
+            method() {               // same as above code with function f1() but shorthand
+                console.log('method');
+                
+            }                                
+        };
+
+        console.log(object5);
+        object5.method();
+        
+        
     </script>
 </body>
 </html>
