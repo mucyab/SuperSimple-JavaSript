@@ -16,6 +16,7 @@
         score.win = 0;
         score.losses = 0;
         score.ties = 0;
+        localStorage.removeItem('score');
     "
     >
       Reset Score
@@ -23,11 +24,7 @@
 
     <script>
       // put score outside so, it change from last time game play, if score put inside the function it will change everytime.
-      const score = {
-        win: 0,
-        losses: 0,
-        ties: 0,
-      };
+      const score = JSON.parse(localStorage.getItem('score')) //store our score permanently in local storage instead of everytime refresh.
 
       // 1. This function handles the computer's random choice
       function pickComputerMove() {
@@ -88,7 +85,7 @@
           score.ties += 1;
         }
 
-        localStorage.setItem('message', 'hello');
+        localStorage.setItem('score', JSON.stringify(score));
 
         // Display the results
         alert(`You Picked ${playerMove}. Computer Picked ${computerMove}. ${result}
