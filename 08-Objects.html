@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obejects in JavaScript</title>
+</head>
+<body>
+    <script> // Why Object is need. beacuase Object is used to make our code more organized and simple, instead of creating alot of variables, we can   just simple grounp them together. and it also used to call multiple values at ones
+
+        const product = { //object start by { and end by }
+            name: 'socks', // these are Propery-Value pair, seprate by , 
+            price: 1090
+        };
+        console.log(product); // call the object
+        console.log(typeof product); // if we want to check Type of.
+        console.log(product.name); // call the signle Propert-Value Pair.
+        console.log(product.price);
+
+        product.name = 'cotton socks'; // Change the Value of Propert already assigned
+        console.log(product);
+
+        product.newProperty = true; //Add new property
+        console.log(product);
+
+        delete product.newProperty; // delete any property in the Object
+        console.log(product);
+        
+        const product1 = {
+            name: 'Shirt',
+            ['delivery-time']: '1 day',
+            rating: {               // nested object, object inside the object
+                stars: 4.5,
+                count: 87
+            },
+                      
+            //adding function in an object
+            fun: function f1 () {
+                console.log('function inside the object');
+                
+            }
+        };
+
+        const product2 = {
+            name: 'Shirt',
+            color: 'white',
+            rating: {               // nested object, object inside the object
+                stars: 4.5,
+                count: 87
+            },
+
+            //adding function in an object
+            fun: function f1 () {
+                console.log('function inside the object');
+            }
+        };
+        console.log(product2);
+        console.log(product1);
+        console.log(product1.name); //Dot. Notation
+        console.log(product2.color); //Dot. Notation
+        console.log(product1['name']); //same as Dot-Notation. its Brackets Notation, and we access by value in string variable
+       // console.log(product1.delivery-time); // JavaScript take - as Math, and give error, so we use [], 
+        console.log(product1['delivery-time']);
+
+        console.log(product1.rating);
+        console.log(product1.rating.count);
+        console.log(product1.fun); // call the function in the object, it will give the function code
+        product1.fun(); // call the function in the object, as function was assigned 
+        
+        // function inside the object is Method, as "console" is a object provided by JavaScript, and "log" is function. it execute what is inside ().
+        console.log(typeof console.log); // show the Type of console.log = function.
+
+        // Math.random is also Method, "Math" is object and "random" is function
+        
+        // "JSON" JavaScript object Notation, it is similer to JavaScript Object but with less feature, heavily use of "" in Value and Properties both, does't support function as object does support.
+
+        // why we use JSON instead of Obeject, as JSON is Universal, it supported by all languages and JavaScript Object only work in JavaScript. we use jSON to send data to other computer/systems which does not support JavaScript. and it also support data store in local Drive.
+
+        JSON.stringify(product1) // convert javaScript Object into JSON.
+        console.log(JSON.stringify(product1));  // converted object to string
+        console.log(typeof JSON.stringify(product1)); // check type of 
+        
+        const jsonString = JSON.stringify(product1);
+        console.log(JSON.parse(jsonString));  //convert JSON into JavaScript Object
+        
+        //other values have property in them
+        //you may wonder how 'strings' have properties, because JavaScript have feature called Auto-Boxing. JavaScript automatically wrap values in Auto-Boxing, and this apply numbers nad boolean values too.
+        console.log('tera ma ka bosra uhhh'.length);
+        console.log('tera ma ka bosra uhhh'.toUpperCase());
+        
+        //objects are references. or copy by references
+
+        const object1 = {
+            message: 'hello'
+        };
+        const object2 = object1;
+
+        object1.message = 'Good Puppy';
+        console.log(object1);
+        console.log(object2);
+        
+        // there is refence of two different value, but not the same refence, it only compare reference not the values inside on it.
+        const object3 = {
+            message: 'Good Puppy'
+        };
+        console.log(object3 === object1); // false
+
+        console.log(object2 === object1); // true
+        
+        const object4 = {
+            message: 'Good work',
+            price: 799
+        }
+        // const message = object4.message;
+        const {message, price} = object4; // this will decunstract of a property
+        console.log(message);
+        console.log(price); //Destructuring - easier way to take properties out of an Object
+
+        const object5 = {
+            //message: message  
+            message,                  // work same as message: message  but shorthand
+           
+            
+           /* method: function f1() {
+                console.log('method');    
+            }
+           */
+
+            method() {               // same as above code with function f1() but shorthand
+                console.log('method');
+                
+            }                                
+        };
+
+        console.log(object5);
+        object5.method();
+        
+        
+    </script>
+</body>
+</html>
