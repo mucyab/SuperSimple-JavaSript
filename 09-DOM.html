@@ -7,6 +7,7 @@
   </head>
   <body>
     <button>Hello</button>
+    <button class="js-button">Dosra Button </button>
 
     <script>
       console.log(document.title);
@@ -19,11 +20,21 @@
 
       // document.body.innerHTML = 'hello'; // DOM is built-in JavaScript Object. in this line DOM change the button to plain Text. it change the HTML original element.
 
-      document.body.innerHTML = "<button>Tari Behn di Siri</button>";
+      // document.body.innerHTML = "<button>Tari Behn di Siri</button>";
 
-      document.querySelector("button"); 
+      document.querySelector("button");  //work as document.body
       console.log(document.querySelector("button"));
+      console.log(document.querySelector("button").innerHTML);
+        /* document.querySelector("button")
+            .innerHTML = 'changed'; */
 
+        document.querySelector('.js-button');
+        console.log(document.querySelector('.js-button'));
+
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+        
+        
 
       //syntax Rule. it contain properites as body, title that can be access by document. DOM is directly link to the Webpage.
       // it also have methods too
