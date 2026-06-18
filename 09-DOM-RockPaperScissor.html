@@ -11,8 +11,10 @@
     <button onclick="playGame('ROCK')">ROCK</button>
     <button onclick="playGame('PAPER')">PAPER</button>
     <button onclick="playGame('SCISSOR')">SCISSOR</button>
-    <p class="js-score"></p>
     <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+    
     <button
       onclick="
         score.win = 0;
@@ -108,11 +110,19 @@
           score.ties += 1;
         }
 
+        
         updateScoreElement();
-
+        
+        document.querySelector('.js-result').innerHTML = 'Pick a Move Chupe!';
+        document.querySelector('.js-moves').innerHTML = '';
+        
         localStorage.setItem("score", JSON.stringify(score));
 
         // Display the results
+
+        document.querySelector(".js-result").innerHTML = result;
+
+        document.querySelector(".js-moves").innerHTML = `You Picked ${playerMove} | Computer Picked ${computerMove}`;
 
         document.querySelector(".js-result") =
           innerHTML = `You Picked ${playerMove}. Computer Picked ${computerMove}. ${result}
