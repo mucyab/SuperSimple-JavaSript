@@ -11,6 +11,7 @@
     <button onclick="playGame('ROCK')">ROCK</button>
     <button onclick="playGame('PAPER')">PAPER</button>
     <button onclick="playGame('SCISSOR')">SCISSOR</button>
+    <p class="js-score"></p>
     <button
       onclick="
         score.win = 0;
@@ -22,6 +23,8 @@
       Reset Score
     </button>
 
+
+
     <script>
       // put score outside so, it change from last time game play, if score put inside the function it will change everytime.
       let score = JSON.parse(localStorage.getItem('score')) || {
@@ -29,6 +32,7 @@
           losses: 0,
           ties: 0
         }; //store our score permanently in local storage instead of everytime refresh.
+
 
         /*
       if (!score) {
@@ -38,6 +42,9 @@
           ties: 0
         };
       } */
+
+        document.querySelector('.js-score')
+        .innerHTML = `wins: ${score.win}, Losses: ${score.losses}, Ties: ${score.ties}`
 
       // 1. This function handles the computer's random choice
       function pickComputerMove() {
