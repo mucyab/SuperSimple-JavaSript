@@ -7,7 +7,7 @@
   </head>
   <body>
     <p>YouTube Subscribe Button</p>
-    <button onclick="Subscribe" class="js-subscribe-button">Subscribe</button>
+    <button onclick="Subscribe()" class="js-subscribe-button">Subscribe</button>
 
     <p>Amazon Shipping Calculator</p>
     <input
@@ -15,7 +15,7 @@
       class="js-cost-input"
       onkeydown="
         console.log(event.key);
-        if ((event.key = 'Enter')) {
+        if ((event.key === 'Enter')) {
           calculateTotal();
         }
       "
