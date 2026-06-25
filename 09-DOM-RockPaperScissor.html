@@ -11,26 +11,31 @@
     <button onclick="playGame('ROCK')">ROCK</button>
     <button onclick="playGame('PAPER')">PAPER</button>
     <button onclick="playGame('SCISSOR')">SCISSOR</button>
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+    
     <button
       onclick="
         score.win = 0;
         score.losses = 0;
         score.ties = 0;
         localStorage.removeItem('score');
-    "
+        updateScoreElement();
+      "
     >
       Reset Score
     </button>
 
     <script>
       // put score outside so, it change from last time game play, if score put inside the function it will change everytime.
-      let score = JSON.parse(localStorage.getItem('score')) || {
-          win: 0,
-          losses: 0,
-          ties: 0
-        }; //store our score permanently in local storage instead of everytime refresh.
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        win: 0,
+        losses: 0,
+        ties: 0,
+      }; //store our score permanently in local storage instead of everytime refresh.
 
-        /*
+      /*
       if (!score) {
         score = {
           wins: 0,
@@ -38,6 +43,13 @@
           ties: 0
         };
       } */
+
+      updateScoreElement();
+
+      function updateScoreElement() {
+        document.querySelector(".js-score").innerHTML =
+          `wins: ${score.win}, Losses: ${score.losses}, Ties: ${score.ties}`;
+      }
 
       // 1. This function handles the computer's random choice
       function pickComputerMove() {
@@ -98,11 +110,20 @@
           score.ties += 1;
         }
 
-        localStorage.setItem('score', JSON.stringify(score));
+        
+        updateScoreElement();
+        
+        document.querySelector('.js-result').innerHTML = 'Pick a Move Chupe!';
+        document.querySelector('.js-moves').innerHTML = '';
+        
+        localStorage.setItem("score", JSON.stringify(score));
 
         // Display the results
-        alert(`You Picked ${playerMove}. Computer Picked ${computerMove}. ${result}
-        wins: ${score.win}, Losses: ${score.losses}, Ties: ${score.ties}`);
+
+        document.querySelector(".js-result").innerHTML = result;
+
+        document.querySelector(".js-moves").innerHTML = `You Picked ${playerMove} | Computer Picked ${computerMove}`;
+
       }
     </script>
   </body>
