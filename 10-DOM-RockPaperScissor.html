@@ -17,14 +17,23 @@
       .move-icon {
         height: 50px;
       }
+      .move-button {
+        background-color: transparent;
+        border: 3px solid white;
+        width: 100px;
+        height: 100px;
+        border-radius: 60px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <p class="title">Rock Paper Scissors</p>
 
-    <button onclick="playGame('ROCK')" ><img src="icons/rock-emoji.png" class="move-icon" alt="rock-emoji"></button>
-    <button onclick="playGame('PAPER')" ><img src="icons/paper-emoji.png" class="move-icon" alt="paper-emoji"></button>
-    <button onclick="playGame('SCISSOR')" ><img src="icons/scissors-emoji.png" class="move-icon" alt="scissors-emoji"></button>
+    <button onclick="playGame('ROCK')"  class="move-button"  ><img src="icons/rock-emoji.png" class="move-icon" alt="rock-emoji"></button>
+    <button onclick="playGame('PAPER')"  class="move-button" ><img src="icons/paper-emoji.png" class="move-icon" alt="paper-emoji"></button>
+    <button onclick="playGame('SCISSOR')" class="move-button"  ><img src="icons/scissors-emoji.png" class="move-icon" alt="scissors-emoji"></button>
     <p class="js-result"></p>
     <p class="js-moves"></p>
     <p class="js-score"></p>
