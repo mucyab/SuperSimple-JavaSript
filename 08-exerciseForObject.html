@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise for Obeject in JavaScript</title>
+</head>
+<body>
+    <script>
+        const amazon = {
+            product: "Basketball",
+            price: 2096
+        }
+        amazon["Delivery-Time"] = "3 Days"
+
+        console.log(amazon);
+        
+        amazon.price += 500
+
+        console.log(amazon);
+        
+        const p1 = {
+            name: "Shirt",
+            price: 500
+        }
+        const p2 = {
+            name: "Pant",
+            price: 300
+        }
+
+        function comparePrice(p1, p2) {
+            if (p1.price < p2.price) {
+                return  p1
+            } else {
+                return p2
+            }
+        }
+
+        console.log(comparePrice(p1, p2));
+        
+
+    </script>
+</body>
+</html>
