@@ -3,7 +3,7 @@ const todoList = ["make dinner", "wash dishes"];
 renderTodoList ();
 function renderTodoList() {
   let todoListHtml = " ";
-
+    // Generate HTML for user automatically, 
   for (let i = 0; i < todoList.length; i++) {
     const todo = todoList[i];
     const html = `<p>${todo}</p>`;
@@ -13,6 +13,8 @@ function renderTodoList() {
 
   document.querySelector(".js-todo-list").innerHTML = todoListHtml;
 }
+// Main Idea of JavaScript. Creating websites with JavaScript we follow three step process, 1. save the data, 2. Generate the HTML, 3. Make website interactive.
+
 
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
