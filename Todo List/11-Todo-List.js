@@ -10,9 +10,11 @@ function renderTodoList() {
   let todoListHtml = " ";
   // Generate HTML for user automatically,
   for (let i = 0; i < todoList.length; i++) {
-    const todo = todoList[i];
+    const todoObject = todoList[i];
+    const {name, dueDate} = todoObject;
+    
     const html = `
-    <p>${todo} 
+    <p>${name} ${date}
     <botton onclick="
       todoList.splice(${i}, 1);
       renderTodoList();
@@ -30,6 +32,8 @@ function renderTodoList() {
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
   const name = inputElement.value;
+
+  
 
   todoList.push(name);
   console.log(todoList);
