@@ -7,18 +7,18 @@ dueDate: '2022-12-23'}
 
 renderTodoList();
 function renderTodoList() {
-  let todoListHtml = " ";
+  let todoListHtml = "";
   // Generate HTML for user automatically,
   for (let i = 0; i < todoList.length; i++) {
     const todoObject = todoList[i];
     const {name, dueDate} = todoObject;
     
     const html = `
-    <p>${name} ${date}
-    <botton onclick="
+    <p>${name} ${dueDate}
+    <button onclick="
       todoList.splice(${i}, 1);
       renderTodoList();
-      "> Delete </botton> 
+      "> Delete </button> 
     </p>
     `;
     todoListHtml += html;
@@ -35,7 +35,7 @@ function addTodo() {
 
   const dateElement = document.querySelector(
     '.js-due-date-input')
-    const dueDate  = dateInputElement.value;
+    const dueDate  = dateElement.value;
 
   todoList.push({
    // name: name,
