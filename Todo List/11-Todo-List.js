@@ -23,7 +23,7 @@ function renderTodoList() {
     `;
     todoListHtml += html;
   }
-  console.log(todoListHtml);
+ 
 
   document.querySelector(".js-todo-list").innerHTML = todoListHtml;
 }
@@ -43,7 +43,7 @@ function addTodo() {
     name,
     dueDate
   });
-  console.log(todoList);
+  
 
   inputElement.value = "";
 
