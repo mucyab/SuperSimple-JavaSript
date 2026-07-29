@@ -69,6 +69,21 @@
         console.log(addOne([1, 2, 3])); // calling function again but without writing the code again, thats why i commented the code above.
         console.log(addOne([-2, -1, 0, 99]));
 
+        function addNums(array, nums) {
+            const result = [];
+            for (let d = 0; d < array.length; d++){
+                result.push(array[d] + nums)
+            }
+            return result;
+        }
+        console.log(addNums([1, 2, 3], 2));
+        console.log(addNums([1, 2, 3], 3));
+        console.log(addNums([-2, -1, 0, 99], 2));
+
+        
+
+        
+
     </script>
 </body>
 </html>
