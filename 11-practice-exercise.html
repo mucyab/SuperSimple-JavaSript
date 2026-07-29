@@ -14,6 +14,24 @@
         }
         console.log(getLastValue(myArray));
         
+        function arraySwap(myArray){
+            const temp = myArray[0];
+            myArray[0] = myArray[myArray.length - 1];
+            myArray[myArray.length - 1] = temp ; 
+            return myArray;
+        }
+
+        console.log(arraySwap([1, 20, 22, 24, 5]));
+
+        for (let i = 5; i >= 0; i-- ){
+            console.log(i);
+            
+        }
+        
+        
+
+
+
     </script>
 </body>
 </html>
