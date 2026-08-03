@@ -57,17 +57,26 @@
         
         */
 
-        //setTimeout() - allow us to run a function in the future;
+        //setTimeout() - allow us to run a function in the future; Advantage: it does not block other code then will run in future
         setTimeout(function() {
             console.log('timeout');
+            console.log('timeout2');
             
         }, 3000); //giving the 2nd parameter for how long  to wait before running the function. A number in milliseconds
 
-        // asynchronous code.
+        // Asynchronous code - won't wait for the line to finish before going to the next line.
+        // Synchronous code - will wait for the line to finish before going to the next line.
 
-        console.log('next line'); // this line will display first as we put timeout function, and will wait for 3sec of first then it will diplay the first function. won't wait for the line to finish before going to the next line.
+        console.log('next line'); // this line will display first as we put timeout function, and will wait for 3sec of first then it will diplay the first function. 
         
+        //setInterval() - 
+        //01 a function we want to run in future
+        //02 it keep running the code for every 3s on repeate. 
+        setInterval(function() {
+            console.log('Interval');
+        }, 3000);
 
+        console.log('next line 2');
     </script>
 </body>
 </html>
