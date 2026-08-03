@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        
+        /*
         function greeting() {
             console.log('hello');
             
@@ -27,7 +29,7 @@
         //Below is method - function saved inside an Object
         const object1 = {
             nums: 2,
-            fun: function /*greeting*/ (){   //remove the function name greeting(), and making it ananymouse function, because it does needed
+            fun: function(){   //remove the function name greeting(), and making it ananymouse function, because it does needed
                 console.log('helloThree');
                 
             }
@@ -52,8 +54,20 @@
             console.log('hello4');
             
         });
-
         
+        */
+
+        //setTimeout() - allow us to run a function in the future;
+        setTimeout(function() {
+            console.log('timeout');
+            
+        }, 3000); //giving the 2nd parameter for how long  to wait before running the function. A number in milliseconds
+
+        // asynchronous code.
+
+        console.log('next line'); // this line will display first as we put timeout function, and will wait for 3sec of first then it will diplay the first function. won't wait for the line to finish before going to the next line.
+        
+
     </script>
 </body>
 </html>
