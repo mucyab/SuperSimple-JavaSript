@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 Advance Function of JavaScript</title>
+</head>
+<body>
+    <script>
+        function greeting() {
+            console.log('hello');
+            
+        }
+        greeting(); // simple function and function calling method,
+
+        //Functions are also variable, we can save a function inside a variable
+
+        const function1 = function() { //ananomyce function, a function without name, as delete the greeting() 
+            console.log('hello2');
+        }
+
+        console.log(function1);
+        console.log(typeof function1);
+
+        function1();
+
+        //Below is method - function saved inside an Object
+        const object1 = {
+            nums: 2,
+            fun: function greeting(){
+                console.log('helloThree');
+                
+            }
+        };
+        
+        object1.fun();
+
+    </script>
+</body>
+</html>
