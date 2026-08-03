@@ -27,7 +27,7 @@
         //Below is method - function saved inside an Object
         const object1 = {
             nums: 2,
-            fun: function greeting(){
+            fun: function /*greeting*/ (){   //remove the function name greeting(), and making it ananymouse function, because it does needed
                 console.log('helloThree');
                 
             }
@@ -35,6 +35,25 @@
         
         object1.fun();
 
+        //passing the value into the function, as 2 will be passed to param of console.log(param), and display in console.
+
+        function display(param) {
+            console.log(param);
+            
+        }
+        display(2);
+
+        //passing a function into another function. thats called CALLBACK Function.
+
+        function run(param){
+            param();
+        }
+        run(function() {
+            console.log('hello4');
+            
+        });
+
+        
     </script>
 </body>
 </html>
