@@ -15,6 +15,20 @@ if (!score) {
   };
 }
 */
+let isAutoPlaying = false;
+
+function autoPlay() {
+  if (!isAutoPlaying) {
+    setInterval(function (){
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1000);
+    isAutoPlaying = true;
+  } else {
+    
+  }
+}
+
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
