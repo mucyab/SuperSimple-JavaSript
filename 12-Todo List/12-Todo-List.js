@@ -13,21 +13,20 @@ renderTodoList();
 function renderTodoList() {
   let todoListHtml = "";
   // Generate HTML for user automatically,
-  for (let i = 0; i < todoList.length; i++) {
-    const todoObject = todoList[i];
+  // Previouse Lesson have for Loop, but this was looped by .forEach(); easier to read and understand.
+  todoList.forEach(function(todoObject, index){
     const { name, dueDate } = todoObject;
-
     const html = `
     <div class="todo-grid">
       <div>${name}</div> 
       <div>${dueDate}</div>
       <button onclick="
-        todoList.splice(${i}, 1);
+        todoList.splice(${index}, 1);
         renderTodoList();
         " class= "delete-todo-button"> Delete </button> 
       </div>`;
     todoListHtml += html;
-  }
+  });
 
   document.querySelector(".js-todo-list").innerHTML = todoListHtml;
 }
