@@ -84,13 +84,18 @@
         //.forEach(); is the preferred way to loop through an Array. easier then for Loop. and we can give another parameter within it,
         [
             'make dinner',
-            'wash dishies',
+            'wash dishes',
             'watch youtube'
-        ].forEach(function(values, index){
+        ].forEach(function(value, index){ //.forEach() does not have break feature, if we want to exit early the we will use for Loop.
+            if (value === 'wash dishes') {
+                return;
+            }
             console.log(index);
-            console.log(values);
+            console.log(value);
 
         });
+
+        // if we want to skip a value, as 'wash dishies' want to skip
 
     </script>
 </body>
