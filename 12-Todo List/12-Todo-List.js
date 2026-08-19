@@ -14,7 +14,7 @@ function renderTodoList() {
   let todoListHtml = "";
   // Generate HTML for user automatically,
   // Previouse Lesson have for Loop, but this was looped by .forEach(); easier to read and understand.
-  todoList.forEach(function(todoObject, index){
+  todoList.forEach((todoObject, index) => {
     const { name, dueDate } = todoObject;
     const html = `
     <div class="todo-grid">
