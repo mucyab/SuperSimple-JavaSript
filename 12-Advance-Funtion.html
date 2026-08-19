@@ -6,6 +6,9 @@
     <title>Lesson 12 Advance Function of JavaScript</title>
 </head>
 <body>
+    <button onclick=" 
+        
+        ">Click</button>
     <script>
         
         /*
@@ -58,7 +61,7 @@
         */
 
         //setTimeout() - allow us to run a function in the future; Advantage: it does not block other code then will run in future
-        setTimeout(function() {
+         /* setTimeout(function() {
             console.log('timeout');
             console.log('timeout2');
             
@@ -82,6 +85,7 @@
 
 
         //.forEach(); is the preferred way to loop through an Array. easier then for Loop. and we can give another parameter within it,
+        /*
         [
             'make dinner',
             'wash dishes',
@@ -92,8 +96,9 @@
             }
             console.log(index);
             console.log(value);
-
+            
         });
+        // if we want to skip a value, as 'wash dishies' want to skip
         
         // Arrowfunction is shorter version to right function in JavaScript. It work same as regular function.
         
@@ -139,10 +144,18 @@
             console.log(value);
 
         });
-        
+
+        //arrowfunction inside an Object
+
+        const object2 = {
+            method: () => {
+            },
+            method() {
+            }
+        }
+        /*
 
         
-        // if we want to skip a value, as 'wash dishies' want to skip
         
         </script>
 </body>
