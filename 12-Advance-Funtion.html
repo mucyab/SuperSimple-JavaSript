@@ -94,14 +94,15 @@
             console.log(value);
 
         });
+        
         // Arrowfunction is shorter version to right function in JavaScript. It work same as regular function.
-
+        
         const arrowFunction = () => {
             console.log('hello');
             
         };
         arrowFunction();
-
+        
         
         const arrowFunction2 = (param, param2) => {
             console.log('hello2');
@@ -110,11 +111,39 @@
         };
         arrowFunction2();
 
+        //in arrowfunction we did not need to use () in adding param like this (param);
+                         // here no brackets   
+        const oneParam = param => {
+            console.log(param + 1);
+            
+        };
+        oneParam (2);
 
+        // here is one line arrow function, where we write in one line, no return requered and no {} curly bracket needed .
+        
+        const oneLine = () => 2 + 3;
+        console.log(oneLine());
+        
+        // shorter version to write the regular function.
+
+        //adding arrow funtion on practical example.
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach((value, index) => { //.forEach() does not have break feature, if we want to exit early the we will use for Loop.
+            if (value === 'wash dishes') {
+                return;
+            }
+            console.log(index);
+            console.log(value);
+
+        });
+        
 
         
         // if we want to skip a value, as 'wash dishies' want to skip
-
-    </script>
+        
+        </script>
 </body>
 </html>
