@@ -9,10 +9,18 @@
     <button class="js-button">Click</button>
     <script>
       const buttonElement = document.querySelector('.js-button');
+      
+      const eventListerner = () => {
+          console.log('click');
+      }
+      
+      buttonElement.addEventListener('click', eventListerner);
+
+
+      buttonElement.removeEventListener('click', eventListerner);
 
       buttonElement.addEventListener('click', () => {
-          console.log('click');
-
+          console.log('click2');
       });
 
       //want to do work but to lazy to done,  smiley face
@@ -91,6 +99,7 @@
 
       //.forEach(); is the preferred way to loop through an Array. easier then for Loop. and we can give another parameter within it,
       /*
+
       [
           'make dinner',
           'wash dishes',
@@ -158,7 +167,7 @@
           method() {
           }
       }
-      /*
+      */
     </script>
   </body>
 </html>
