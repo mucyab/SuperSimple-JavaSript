@@ -36,8 +36,8 @@ document.querySelector(".js-rock-button").addEventListener("click", () => {
 document.querySelector(".js-paper-button").addEventListener("click", () => {
   playGame("paper");
 });
-document.querySelector(".js-scissor-button").addEventListener("click", () => {
-  playGame("scissor");
+document.querySelector(".js-scissors-button").addEventListener("click", () => {
+  playGame("scissors");
 });
 
 function playGame(playerMove) {
