@@ -32,6 +32,11 @@ function renderTodoList() {
 }
 // Main Idea of JavaScript. Creating websites with JavaScript we follow three step process, 1. save the data, 2. Generate the HTML, 3. Make website interactive.
 
+document.querySelector('.js-add-todo-button')
+  .addEventListener('click', () => {
+    addTodo();
+  });
+
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
   const name = inputElement.value;
